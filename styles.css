@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: white;
+    color: hsl(220, 13%, 13%);
+}
+.header {
+    display: grid;
+    grid-template-columns: 1fr minmax(65%, 1fr) 1fr;
+    justify-items: start;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 3% 10%;
+}
+.header img {
+    max-width: 100%;
+}
+.header-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+.header-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: end;
+    align-items: center;
+    gap: 1rem;
+}
+.menu-icon {
+    display: none;
+}
+.avatar {
+    width: 2rem;
+}
+.cart {
+    width: 1.5rem;
+}
+.header hr {
+    width: 100%;
+    grid-column: 1/4;
+    border: none;
+    border-bottom: solid gray 1px;
+    padding: 3% 0 0;
+}
+
+.menu {
+    display: grid;
+    position: fixed;
+    background-color: white;
+    padding: 2rem 5rem 20rem 2rem;
+    height: min-content;
+    gap: 2rem;
+    box-shadow: 0rem 0rem 25rem black;
+    animation-name: example;
+    animation-duration: 500ms;
+    z-index: 2;
+}
+@keyframes example {
+    0%   {left: -100rem;}
+    100% {left: 0;}
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3% 10% 20%;
+}
+.item-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.item-preview img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+.img-collection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+.selected-img {
+    border: solid hsl(26, 100%, 55%) 3px;
+    filter: brightness(0.8) grayscale(0.1);
+}
+.nav div {
+    display: none;
+}
+
+.item-data {
+    padding: 15%;
+}
+.item-data p {
+    color: hsl(219, 9%, 45%);
+}
+.company-name {
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+}
+.pricing {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: start;
+    padding-bottom: 2rem;
+    width: max-content;
+    gap: 1rem;
+}
+.discount{
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    width: max-content;
+    padding: 1px 3px;
+    font-size: 0.75rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.price-after {
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+.price-before {
+    font-weight: 700;
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+.add-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+.cart-num {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    justify-items: center;
+    gap: 1rem;
+}
+.add-item button {
+    border: none;
+    background-color: hsl(26, 100%, 55%);
+    color: wheat;
+    border-radius: 1rem;
+    font-weight: 700;
+    width: -webkit-fill-available;
+    padding: 0 2rem;
+}
+button img {
+    filter: brightness(3);
+    vertical-align: bottom;
+}
+
+.lightbox {
+    position: absolute;
+    justify-items: center;
+    width: -webkit-fill-available;
+    padding: 10% 40% 50%;
+    background: rgba(105, 105, 105, .5);
+    z-index: 1;
+    height: -webkit-fill-available;
+    display: grid;
+    grid-template-rows: max-content max-content max-content;
+}
+.close-lightbox {
+    justify-self: end;
+    width: 1rem;
+    padding: 2% 0;
+}
+.cart-div {
+    position: fixed;
+    background-color: white;
+    right: 10%;
+    top: 7%;
+    border-radius: 1rem;
+    box-shadow: 0 0 12px 1px gray;
+    padding: 1% 2% 5%;
+    width: 20rem;
+    height: 20rem;
+}
+.cart-data {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 0.2rem;
+}
+.delete-icon {
+    max-width: 100%;
+}
+.cart-product{
+    width: 4rem;
+    border-radius: 1rem;
+}
+.cart-data button {
+    grid-column: 1/4;
+    width: -webkit-fill-available;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+}
+.cart p{
+    margin: 0;
+}
+.item-num {
+    position: absolute;
+    background-color: orange;
+    color: white;
+    padding: 1px 5px;
+    border-radius: 1rem;
+    top: 1rem;
+}
+button:hover{
+    cursor: pointer;
+}
+.cart:hover{
+    cursor: pointer;
+}
+img:hover{
+    cursor: pointer;
+}
+@media (max-width:1024px) {
+    .header {
+        padding: 3% 5%;
+    }
+    .item {
+        padding: 3% 5% 20%
+    }
+    .item-data {
+        padding: 10% 10% 0;
+    }
+    .cart-div {
+        top: 5%;
+        right: 5%;
+    }
+}
+@media (max-width:768px) {
+    .item{
+        grid-template-columns: 1fr;
+        padding: 3% 0% 20%;
+    }
+    .item-preview img {
+        border-radius: 0;
+    }
+    .header {
+        grid-template-columns: 1fr 1fr;
+    }
+    .header hr {
+        display: none;
+    }
+    .header-items {
+        display: none;
+    }
+    .item-data {
+        padding: 0% 5% 0;
+    }
+    .img-collection {
+        display: none;
+    }
+    .pricing {
+        grid-template-columns: 1fr 1fr 1fr;
+        width: unset;
+    }
+    .price-before {
+        justify-self: end;
+    }
+    .add-item {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .cart-num {
+        width: -webkit-fill-available;
+    }
+    .add-item button {
+        padding: 2rem;
+    }
+    .logo-div {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        align-items: center;
+        gap: 1rem;
+    }
+    .menu-icon {
+        display: unset;
+    }
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        bottom: 50%;
+        justify-items: center;
+        gap: 11rem;
+        z-index: 0;
+    }
+    .nav div {
+        display: grid;
+        background-color: white;
+        border-radius: 100%;
+        padding: 1rem;
+        width: max-content;
+    }
+    .lightbox {
+        display: none;
+    }
+    .cart-div {
+        top: 5rem;
+        right: 0;
+        margin: 0 5%;
+        z-index: 1;
+        padding: 2rem 0.75rem 0;
+    }
+}
+@media (max-width:320px) {
+    .cart-div {
+        width: 18.5rem;
+        margin: 0;
+    }
+}
